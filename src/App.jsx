@@ -6,6 +6,7 @@ import Drawer, {
   DrawerHeader,
 } from "./components/reusables/Drawer";
 import Card from "./components/reusables/Card";
+import Draggable from "react-draggable";
 
 function App() {
   // return handlers function
@@ -128,8 +129,12 @@ function App() {
                 color: `${color}`,
               }}
             >
-              <p className=" w-4/5">{text1Value}</p>
-              <p className=" w-4/5">{text2Value}</p>
+              <Draggable>
+                <p className=" w-4/5">{text1Value}</p>
+              </Draggable>
+              <Draggable>
+                <p className=" w-4/5">{text2Value}</p>
+              </Draggable>
             </div>
           </form>
         </div>
